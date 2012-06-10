@@ -12,15 +12,12 @@
 	<script src="jqskin/jqskin.switch.js"></script>
 	<script src="jqskin/jqskin.keypad.js"></script>
 
-	<!-- Set up MIDI Bridge and MIDI callback -->
-    <script type="text/javascript" src="lib/MIDIBridge.js"></script>     
-    <script type="text/javascript" src="lib/MIDI.js"></script>     
+	<!-- Set up Jazz MIDI plugin and MIDI callback -->
+	<script type="text/javascript" src="jazz.js"></script>
 
 	<style>
-	body { background-color: #999999; }
-	#draw { height: 2000px; }
-	.block div { margin-right: 15px; float: left; }
-	#about {width: 240px; }
+	body { background-color: #999999; overflow: hidden;}
+	#draw { height: 500px; }
 	</style>
 
 	<script src="websynth_gui.js"></script>
@@ -29,6 +26,13 @@
 </head>
 
 <body>
+	<p>
+		MIDI Input:
+		<select id=midiIn onchange='changeMidi();'>
+			<option value="">Not connected</option>
+		</select>
+		<div id="msg"></div>
+	</p>
 	<div id="draw"></div>
 </body>
 </html>
