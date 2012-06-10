@@ -27,7 +27,7 @@ function midiProc2(t,a,b,c) {
     if (b == 1) {
       console.log( Math.floor( c / 1.27 ) );
         p.filter.set_freq( Math.floor( c / 1.27 ) );
-    } else if (b == 1) {
+    } else if (b == 2) {
         p.filter.set_q( Math.floor( c / 1.27 ) );
     }
   }
